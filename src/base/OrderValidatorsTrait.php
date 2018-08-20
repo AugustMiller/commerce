@@ -47,6 +47,9 @@ trait OrderValidatorsTrait
      */
     public function validateAddress($attribute)
     {
+        // Bypass address validation after an order is complete:
+        if ($order->isCompleted) return;
+
         /** @var Address $address */
         $address = $this->$attribute;
         $customer = $this->getCustomer();
