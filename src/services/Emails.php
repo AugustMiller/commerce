@@ -886,6 +886,7 @@ class Emails extends Component
                 'emails.enabled',
                 'emails.templatePath',
                 'emails.plainTextTemplatePath',
+                'emails.language',
                 'emails.uid',
             ])
             ->orderBy('name')
